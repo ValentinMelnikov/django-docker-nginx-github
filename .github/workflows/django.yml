@@ -21,6 +21,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
+        pwd 
         docker-compose -f docker-compose.prod.yml build 
         docker-compose down --remove-orphans
         docker-compose -f docker-compose.prod.yml up 
