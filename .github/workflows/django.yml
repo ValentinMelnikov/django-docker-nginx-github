@@ -22,6 +22,7 @@ jobs:
     - name: Install Dependencies
       run: |
         pwd 
+        cd django-docker-nginx-github
         docker-compose -f docker-compose.prod.yml build 
         docker-compose down --remove-orphans
         docker-compose -f docker-compose.prod.yml up 
